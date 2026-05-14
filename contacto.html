@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto Axion Tech</title>
+    <meta name="description" content="Contacto de la empresa número 1 en desarrollo web.">
+    <meta name="author" content="Ismael Tortosa López">
+    <link rel="shortcut icon" type="image/x-icon" href="Images/FaviconAxionTech.png">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo">Axion Tech</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyecto-intermodular.html">Proyectos</a></li>
+                <li><a href="cronologia.html">Cronología</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section class="contacto">
+        <h2>Contacto</h2>
+        <p>Cuéntanos tu proyecto y nos pondremos en contacto contigo.</p>
+
+        <form action="morning-paper-a0fc.contry-1990.workers.dev" method="POST"> <!--Para que los datos que rellenemos se envien al servidor que nos habeís facilitado.-->
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" maxlength="30" pattern="^[a-zA-Z0-9]*$" required><br>
+
+            <label for="Correo electrónico">Correo electrónico</label>
+            <input type="email" id="Correo electrónico" placeholder="Correo electrónico" required><br>
+
+            <label for="empresa">Empresa</label>
+            <input type="text" id="empresa" name="empresa" placeholder="Nombre de la empresa" required><br>
+
+            <label for="asunto">Asunto</label>
+            <select id="asunto" name="asunto" required>
+                <option value="">Selecciona un asunto</option>
+                <option value="desarrollo-web">Desarrollo Web</option>
+                <option value="ux-ui">Diseño UX/UI</option>
+                <option value="apps">Desarrollo de aplicaciones</option>
+                <option value="consultoria">Consultoría tecnológica</option>
+
+            </select><br>
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos tu proyecto" rows="15" cols="50" required></textarea><br>
+
+            <div class="privacidad">
+                <input type="checkbox" id="privacidad" name="privacidad" required><br>
+                <label for="privacidad">
+                    He leído y acepto la política de privacidad
+                </label>
+            </div>
+
+            <button type="submit">Enviar mensaje</button>
+
+        </form> <!--En el form he puesto todos los campos required para que no se pueda enviar el formulario sin completar todos los campos,
+        además de poner algunas validaciones más en otros que así lo necesitaban como el caso de nombre para que no se puedan poner cosas raras.-->
+
+    </section>
+
+
+
+
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <div class="footer-column">
+                <h4>Axion Tech</h4>
+                <p>Expertos en diseño y desarrollo web.</p>
+                <p class="copyright">
+                    © 2025 Axion Tech. <br />
+                    Todos los derechos reservados.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contacto</h4>
+                <ul>
+                    <li>Gmail: <a href="contacto@axiontech.com">contacto@axiontech.com</a></li>
+                    <li>Teléfono: <a href="+34 600 123 456">+34 600 123 456</a></li>
+                    <li>Ubicación: Elche, España.</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="proyecto-intermodular.html">Proyectos</a></li>
+                    <li><a href="cronologia.html">Cronología</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Redes sociales</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="#" aria-label="X">X</a>
+                    <a href="#" aria-label="Github">Github</a>
+                </div>
+
+                <div class="legal-links">
+                    <a href="#">Aviso legal</a>
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+</body>
+</html>

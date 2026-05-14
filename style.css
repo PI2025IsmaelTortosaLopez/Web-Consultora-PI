@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); /*Importación de Google Fonts*/
+
+:root{
+    --color-primary: #1e3a8a;
+    --color-secondary: #facc15;
+    --color-bg: #f5f5f5;
+    --color-text: #1f2937;
+    --color-light: #ffffff;  
+    --color-border: #e5e7eb;
+}
+
+*,*::before, *::after{ /*Para el reset y aplicación global de box-sizing:border-box*/
+    box-sizing: border-box; 
+    margin: 0; /*Para el el espacio que quiero que quede entre el borde y el contenido del elemento*/
+    padding: 0; /*Para el margen externo de un elemento.*/
+}
+
+body{
+    font-family: 'Roboto', sans-serif; 
+    font-size: 1rem; 
+    line-height: 1.6; /*Para el espacio entre las líneas*/
+    color: var(--color-text); /*Para el color del texto*/
+    background-color: var(--color-bg); /*Para el color de fondo*/
+}
+
+.container{
+    width: 90%; /*Para el ancho del área del contenedor*/
+    max-width: 1200px; /*El ancho máximo del contenedor*/
+    margin: 0 auto;
+}
+
+.header, .main-nav{
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    padding: 1rem 0;
+}
+
+.logo{
+    font-size: 1.5rem; /*Para el tamaño de la letra en el logo*/
+    font-weight: bold; 
+}
+
+.main-nav, .nav-container{
+    display: flex; 
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-nav ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin-left: auto;
+}
+
+.main-nav ul li{
+    display: flex;
+    align-items: center;
+}
+
+.main-nav a{
+    display: block; /*Para los nombres del nav se muestren independientes*/
+    padding: 0.5rem 0;
+    line-height: 1;
+    color: var(--color-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease; /*Para cuando el usuario ponga el raton encima de los elemtnos del nav cambien de color.*/
+}
+
+.main-nav a:hover{
+    color: var(--color-secondary);
+}
+
+.btn-cta, .btn-outline{
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--color-primary);
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-cta:hover, .btn-outline:hover{
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: var(--color-text);
+}
+
+#hero-index{
+    display: flex;
+    height: 50vh;
+    background-color: var(--color-primary);
+    background-image: url('images/Hero\ section.jpg'); /*Como nos indicas en el pdf ponemos la ruta de la imagen para que se vea de fondo en css y no en html*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color-light);
+    padding: 0 1rem;
+}
+
+#hero-index h1{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#hero-index p{
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-title{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+}
+
+.services-grid{
+    display: flex; /*Para definir el espacio en filas y columnas y que sea más cómodo trabajar que con flex*/
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.service-card{
+    background-color: var(--color-light);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover{
+    transform: translateY(-5px);
+}
+
+.service-card h3{
+    margin-bottom: 0.5rem;
+    color: var(--color-secondary);
+}
+
+.service-card p{
+    font-size: 0.95rem;
+}
+
+.layout{
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.layout main{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+}
+
+.layout aside{
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 6rem;
+    flex: 1 1 0%;
+    background-color: var(--color-light);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.3125rem rgba(0,0,0,0.1);
+}
+
+.checklist{
+    list-style: none; /*Para poder poner algun estilo a mi lista*/
+    padding-left: 0;
+}
+
+.checklist li{
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.checklist li::before{
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+}
+
+table.planificación{
+    width: 100%;
+    border-collapse: collapse; /*Para que los bordes de mi tabla se fusionen*/
+    margin: 2rem 0;
+}
+
+table.planificación thead{
+    display: contents;
+}
+
+table.planificación tbody{
+    display: contents;
+}
+
+table.planificación th, table.planificación td{
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+}
+
+table.planificación tr:nth-child(even) td{
+    background-color: #f3f4f6;
+}
+
+table.planificación tr:nth-child(odd) td{
+    background-color: var(--color-light);
+}
+
+.site-footer{
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    padding: 2rem 0;
+}
+
+.footer-container{
+    display: flex;
+    flex-wrap: wrap; /*Lo utilizo junto display:flex y es para que los elem,elementos que no quedan en esa columna de mi footer pasen automáticamente a la siguiente*/
+    gap: 2rem;
+}
+
+.footer-column{
+    flex: 1 1 200px;
+}
+
+.footer-column h4{
+    margin-bottom: 1rem;
+}
+
+.footer-column a{
+    color: var(--color-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover{
+    color: var(--color-secondary);
+}
+
+input, textarea, select{
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus{
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(30,58,138,0.2);
+}
+
+input:valid{
+    border-color: green;
+}
+
+.contacto{
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: var(--color-light);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.contacto h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.contacto p{
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contacto form label{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    margin-top: 1rem;
+}
+
+.contacto form input, .contacto form textarea, .contacto form select{
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 0.5rem;
+}
+
+.contacto form input:focus, .contacto form textarea:focus, .contacto form select:focus{
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(30,58,138,0.2);
+}
+
+.contacto form input:valid{
+    border-color: green;
+}
+
+.contacto form input:invalid{
+    border-color: red;
+}
+
+.contacto form button[type='submit']{
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.contacto form button[type='submit']:hover{
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+}
+
+.contacto .privacidad{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px){
+    .main-nav ul{
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+        margin-left: 0;
+    }
+
+    .layout{
+        flex-direction: column; /*Para que main+aside pasen a una sola columna*/
+    }
+
+    .services-grid{
+        grid-template-columns: 1fr; /*Para que todos los elementos salgan en una única columna 
+        y no se salgan por los bordes y ocasionen problemas en el móvil de visibilidad de la página web*/
+    }
+
+    #hero-index{
+        height: 60vh;
+        background-attachment: scroll;
+    }
+
+    table.planificación, table.planificación thead, table.planificación tbody, table.planificación tr, table.planificación th, table.planificación td{
+        display: block;
+        width: 100%;
+    } /*Añado todo esto para que el móvil la tabla de cronología aparezca verticalemente sin ningún problema*/
+
+    table.planificación thead{
+        display: none;
+    }
+
+    table.planificación tr{
+        margin-bottom: 1.5rem;
+        background-color: var(--color-light);
+        border: 1px solid var(--color-border);
+        border-radius: 0.5rem;
+        padding: 1rem;
+    }
+
+    table.planificación td{
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        border: none;
+        font-size: 0.95rem;
+    }
+
+    table.planificación td::before{
+        content: attr(data-label);
+        font-weight: 600;
+        color: var(--color-primary);
+    }
+
+    .contacto{
+        padding: 1rem;
+    }
+}
